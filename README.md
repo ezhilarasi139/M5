@@ -26,7 +26,8 @@ int main() {
 ```
 
 ## OUTPUT:
- 	![image](https://github.com/user-attachments/assets/0052845c-7279-4623-87de-f883171e6846)
+ 	![Screenshot 2025-04-27 235623](https://github.com/user-attachments/assets/12b82dba-c61a-4f8b-beea-6f7969d8c00b)
+
 
 ## RESULT:
 Thus the program to convert a 23.65 into 25 using pointer has been executed successfully.
