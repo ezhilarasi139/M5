@@ -54,21 +54,20 @@ Write a C program to calculate the Product of first 12 natural numbers using Rec
 ```
 #include <stdio.h>
 
-// Step 1: Define a recursive function
 unsigned long long calculateProduct(int n) {
-    if (n == 1)   // Base condition
+    if (n == 1)
         return 1;
     else
-        return n * calculateProduct(n - 1);   // Step 2: Recursive call
+        return n * calculateProduct(n - 1);
 }
 
 int main() {
-    int n = 12;    // Step 4: Initialize n with 12
-    unsigned long long product;   // Step 3: Declare product variable
+    int n = 12;
+    unsigned long long product;
 
-    product = calculateProduct(n);   // Step 5: Call the recursive function
+    product = calculateProduct(n);
 
-    printf("The product of the first 12 natural numbers is: %llu\n", product); // Step 6: Print the result
+    printf("The product of the first 12 natural numbers is: %llu\n", product);
 
     return 0;
 }
@@ -108,14 +107,14 @@ int main() {
         {1, 2, 3},
         {4, 5, 6},
         {7, 8, 9}
-    }; // Step 1: Declare and initialize the matrix
+    };
 
-    for (int i = 0; i < rows; i++) {   // Step 2: Loop through each row
+    for (int i = 0; i < rows; i++) {
         int sum = 0;
         for (int j = 0; j < cols; j++) {
-            sum += matrix[i][j];       // Step 3: Calculate sum of elements in the row
+            sum += matrix[i][j];
         }
-        printf("Sum of row %d = %d\n", i + 1, sum); // Step 4: Print the sum for each row
+        printf("Sum of row %d = %d\n", i + 1, sum);
     }
 
     return 0;
@@ -151,27 +150,20 @@ Write C program for the below pyramid string pattern. Enter a string: PROGRAM En
 int main() {
     char str[100];
     int num_rows, i, j, midpoint;
-
-    // Step 1: Input string and number of rows
     printf("Enter a string: ");
     scanf("%s", str);
 
     printf("Enter number of rows: ");
     scanf("%d", &num_rows);
 
-    int len = strlen(str); // Get the length of the string
-    midpoint = (2 * num_rows - 1) / 2; // Step 4: Calculate midpoint
-
-    // Step 3: Loop through rows
+    int len = strlen(str);
+    midpoint = (2 * num_rows - 1) / 2;
     for (i = 1; i <= num_rows; i++) {
-        // Print characters
         for (j = 0; j < i; j++) {
-            printf("%c ", str[j % len]); // Cycle through string if needed
+            printf("%c ", str[j % len]);
         }
         printf("\n");
     }
-
-    // Step 5: End of program
     return 0;
 }
 
@@ -220,8 +212,6 @@ int main() {
     int i, n;
     int arr[10];  // Step 2: Declare array
     int *parr = arr; // Initialize pointer to array
-
-    // Step 3: Read number of elements
     printf("Enter number of elements (up to 6): ");
     scanf("%d", &n);
 
@@ -231,19 +221,15 @@ int main() {
     }
 
     printf("Enter %d elements:\n", n);
-    // Step 4: Read elements using pointer arithmetic
     for (i = 0; i < n; i++) {
         scanf("%d", (parr + i));
     }
-
-    // Step 5: Display elements using pointer dereferencing
     printf("The elements are:\n");
     for (i = 0; i < n; i++) {
         printf("%d ", *(parr + i));
     }
 
     printf("\n");
-    // Step 6: End of program
     return 0;
 }
 ```
